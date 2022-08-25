@@ -1,6 +1,6 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +10,17 @@
 <body>
 <div class="container border">
     <div class="panel panel-default" style="margin: 10px">
-        <form class="form-inline border" method="POST" th:object="${usuario}" style="margin: 20px; padding:10px">
+        <form class="form-inline border" method="POST" th:object="${usuario}" th:action="@{/usuarios}" style="margin: 20px; padding:10px">
             <div class="form-group">
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Nome" th:field="*{nome}"/>
+                    <label>
+                        <input type="text" class="form-control" placeholder="Nome" th:field="*{nome}"/>
+                    </label>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Quantidade de livros" th:field="*{quantidadeLivros}"/>
+                    <label>
+                        <input type="text" class="form-control" placeholder="Quantidade de livros" th:field="*{quantidadeLivros}"/>
+                    </label>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Adicionar</button>
